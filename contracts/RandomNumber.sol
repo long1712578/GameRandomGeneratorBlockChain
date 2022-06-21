@@ -25,11 +25,11 @@ contract RandomNumber {
         return uint(uint8(data[sum % data.length])) + uint(uint8(data[(sum + 2) % data.length]));
     }
 
-    function randSingle() internal view returns(uint){
+    function randSingle() public view returns(uint){
         return rand(block.timestamp);
     }
 
-    function rangRange(uint a, uint b) internal view returns(uint){
+    function rangRange(uint a, uint b) public view returns(uint){
         return a + randSingle() % b;
     }
 }
