@@ -29,7 +29,8 @@ contract RandomNumber {
         return rand(block.timestamp);
     }
 
-    function rangRange(uint a, uint b) public view returns(uint){
+    function randRange(uint a, uint b) public view returns(uint){
+        require(a < b, "value a can't bigger than value b");
         return a + randSingle() % b;
     }
 }
