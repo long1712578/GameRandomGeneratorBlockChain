@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "chai": "^4.3.6",
     "ganache-cli": "^6.12.2"
   }
 }

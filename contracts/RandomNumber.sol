@@ -3,6 +3,13 @@ pragma solidity >=0.4.22 <0.9.0;
 
 contract RandomNumber {
 
+    struct HistoryInfo {
+        address player;
+        uint reward;
+    }
+    HistoryInfo[] public historyInfos;
+    uint256 private _tail = 0;
+    mapping (uint256 => HistoryInfo) private _historyInfo;
     address public owner;
 
     constructor() {
@@ -31,6 +38,16 @@ contract RandomNumber {
 
     function randRange(uint a, uint b) public view returns(uint){
         require(a < b, "value a can't bigger than value b");
-        return a + randSingle() % b;
+        uint result = a + randSingle() % b;
+        
+        // HistoryInfo memory _historyInfo;
+        // _historyInfo.player = msg.sender;
+        // _historyInfo.reward = result;
+        //  _historyInfos[_tail] = _historyInfo;
+        //  _tail++;
+        //  emit BET(_tail - 1, msg.sender, msg.value, block.number, result);
+
+        return result;
     }
+
 }
