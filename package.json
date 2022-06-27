@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "chai": "^4.3.6",
+    "@chainlink/contracts": "^0.3.1",
+    "@truffle/hdwallet-provider": "^2.0.3",
+    "dotenv": "^16.0.0",
     "ganache-cli": "^6.12.2"
   }
 }

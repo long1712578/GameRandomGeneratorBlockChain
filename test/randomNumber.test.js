@@ -1,6 +1,6 @@
-const RNG = artifacts.require("RandomNumber");
+const RNG = artifacts.require("Lottery");
 
-contract('RandomNumber', ([deployer, user1, user2]) => {
+contract('Lottery', ([deployer, user1, user2]) => {
     let rng;
     beforeEach(async() => {
         console.log('Before each');
